@@ -1,0 +1,120 @@
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+div{
+    cursor:pointer;
+}
+
+div:hover {
+    background-color:rgba(25,221,0, 0.2)
+}
+
+.screen {
+    background-color: darkgrey;
+}
+
+.field {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    width:430px;
+    height:430px;
+}
+
+.gamefield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:133px;
+    height:133px;
+    background-color:white;
+    margin:5px;
+}
+
+.shape {
+    position:absolute;
+    width:120px;
+    height:120px;
+}
+
+.d-none {
+    display:none;
+}
+
+.player-panel {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size:32px;
+}
+
+.player-panel div {
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   margin:16px;
+}
+
+.player-panel img {
+    margin-right:16px;
+}
+
+.player-inactive {
+    opacity:0.5;
+}
+
+.horizontal-line {
+    position:absolute;
+    height:20px;
+    width:350px;
+    background-color: rgba(0,0,0,0.3);
+    transform: scaleX(0.0);
+    transition: transform 0.5s ease-in-out; 
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.gameover {
+    position:absolute; 
+    left:0; 
+    right:0; 
+    width:100%; 
+    z-index: 5; 
+    animation:zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity:0;
+        transform: scale(0)
+    }
+    to {
+        opacity:1;
+        transform: scale(1)
+    }
+}
+
+.restart-btn {
+    color:white;
+    width:300px;
+    height:75px;
+    font-size:32px;
+    border:1px solid rgba(0,0,0,0.5);
+    background-color: #1C087F;
+    cursor:pointer;
+    position:absolute;
+    bottom:5px;
+    z-index:100;
+}
+
+.restart-btn:hover {
+    background-color:rgb(59,60,168);
+}
